@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+/home/indra/JavaUdemyCourse/.metadata/.plugins/org.eclipse.jdt.core
+3910433863.index
+1540649015.index
+3664110706.index
+2757583082.index
+696877545.index
+1865797976.index
+746985536.index

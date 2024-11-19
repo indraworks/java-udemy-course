@@ -23,3 +23,4 @@ desktop.ini
 # Ignore Maven or Gradle build directories (if applicable)
 target/
 build/
+/.metadata/

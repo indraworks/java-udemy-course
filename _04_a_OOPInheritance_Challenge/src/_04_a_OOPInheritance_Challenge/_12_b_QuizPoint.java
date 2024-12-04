@@ -58,14 +58,17 @@ class Point {
 		return Math.sqrt(Math.pow(x, 2)+Math.pow(y, 2));
 	}
 	
-	//
+	//distance dgn nilai x dan y dimasukan !
 	
 	public double distance(int x2,int y2) {
-		double dx = x2 - 0;
-		double dy = y2 - 0;
+		double dx = x2 - this.x;
+		double dy = y2 - this.y;
 		return Math.sqrt(Math.pow(dx,2) +Math.pow(dy,2) );
 	
 	}
+	
+	
+	
 	//distance point titk object kita dgn titik object yg lainya ! 
 	
 	public double distance (Point otherpoint) {
@@ -74,3 +77,9 @@ class Point {
 		return Math.sqrt(Math.pow(dx,2) +Math.pow(dy,2));
 	}
 }
+
+/*
+ 
+ Adive dari chat gpt:
+ 
+ * 

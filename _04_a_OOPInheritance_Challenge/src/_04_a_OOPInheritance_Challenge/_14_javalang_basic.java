@@ -4,7 +4,7 @@ public class _14_javalang_basic extends Object{
 
 	public static void main(String[] args)  {
 		// TODO Auto-generated method stub
-         Integer.pa
+         
 	}
 
 }

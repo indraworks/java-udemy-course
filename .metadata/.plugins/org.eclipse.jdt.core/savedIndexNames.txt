@@ -12,7 +12,6 @@ INDEX VERSION 1.134+/home/indra/JavaUdemyCourse/.metadata/.plugins/org.eclipse.j
 3910433863.index
 2830713660.index
 2697223116.index
-660324779.index
 746985536.index
 3677783769.index
 1977252126.index

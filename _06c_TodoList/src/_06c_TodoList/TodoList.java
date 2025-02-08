@@ -6,7 +6,8 @@ public class TodoList {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		testShowTodoList();
+		//testShowTodoList();
+		testAddTodoList();
 		    
 	}
 	
@@ -51,7 +52,7 @@ public class TodoList {
 			//sekarang temp yg berisi model aray yg lama blum dibesarkan diisikan 
 			//ke model yg udah tambah 
 			for(var i=0;i <temp.length;i++) {
-				model[i] = temp[i]
+				model[i] = temp[i];
 			}
 			
 			
@@ -66,6 +67,15 @@ public class TodoList {
 			}
 		}
 	}
+	
+	//kita testAdd todolist apa bisa dia kan diatas 10 kita buat resize sd 25 
+	public static void testAddTodoList() {
+		for(int i=0;i<25;i++) {
+			addTodoList("this todo ke:" + i);
+		}
+		showTodoList();
+	}
+	
 	
 	//remove todolist 
 	public static void removeTodoList() {

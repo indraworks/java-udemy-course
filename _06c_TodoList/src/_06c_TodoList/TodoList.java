@@ -7,7 +7,8 @@ public class TodoList {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//testShowTodoList();
-		testAddTodoList();
+		//testAddTodoList();
+		testRemoveTodoList();
 		    
 	}
 	
@@ -78,10 +79,60 @@ public class TodoList {
 	
 	
 	//remove todolist 
-	public static void removeTodoList() {
+	public static boolean removeTodoList(Integer value) {
+		//yg kita haus adalah isi dariarray tsb atau elementnya 
+		//jika index > dari lenth
+		if((value-1) >= model.length) {
+			return false;
+			//jika isi element  kosong/sudah kehapus
+		} else if (model[value-1] ==null) {
+			return false;
+		} else {
+			//kita update array[index yg dihapus
+			//dgn cara beri null
+			//model[value-1] = null;
+			//** kita buat logic baru dimana array yg didelete itu diskip 
+			//atau dihilangkan indexnya muter kekiri naik keatas jadi index+1 nya 
+			//mengisi index sebelumnya ,dan index yg didelete tak ada daftar 
+			for(var i=(value-1);i< model.length;i++) {
+				//jika ada diujung yg didelete maka langung kasih nul 
+				if(i == (model.length -1)) {
+					model[i] = null;
+				} else {
+					model[i] = model[i+1];
+				}
+				
+				
+			}
+			return true;
+		}
+		
 		
 	}
 	
+	//kita coba manual utk lakukan testTodolist 
+	//kita ada array 20 tadinya (maks) 
+	//utk yg skeang kita isi aray ada 4 jadi ada 4 array yg trisi
+	//kita coba check utk operasi ini apda func removeTodoList(Integer value)
+	
+	public static void testRemoveTodoList() {
+		addTodoList("satu");
+		addTodoList("dua");
+		addTodoList("tiga");
+		addTodoList("empat");
+		addTodoList("lima");
+		var result = removeTodoList(20); //hasil result pasti false
+		System.out.println("hasil result ="+result);
+		
+		//diatas sampai 4 kita mau delete array ke 5 maka nnti hasil = false 
+		
+		//kita coba remove yg data ke-2 
+		//result = removeTodoList(2);
+		result = removeTodoList(5);
+		System.out.println(result);
+		showTodoList();
+		
+	}
 	
 	//kita juga buat viewnya  menampilkan view todoList
 	public static void viewShowTodoList() {
